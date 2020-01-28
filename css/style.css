@@ -853,20 +853,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-top: 30px;
 }
 
-/* Portfolio Section
+/* Softwares Section
 --------------------------------*/
-#portfolio {
+#softwares {
   padding: 60px 0;
 }
 
-#portfolio #portfolio-flters {
+#softwares #portfolio-flters {
   padding: 0;
   margin: 5px 0 35px 0;
   list-style: none;
   text-align: center;
 }
 
-#portfolio #portfolio-flters li {
+#softwares #portfolio-flters li {
   cursor: pointer;
   margin: 15px 15px 15px 0;
   display: inline-block;
@@ -881,31 +881,31 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease-in-out;
 }
 
-#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
+#softwares #portfolio-flters li:hover, #softwares #portfolio-flters li.filter-active {
   background: #18d26e;
   color: #fff;
 }
 
-#portfolio #portfolio-flters li:last-child {
+#softwares #portfolio-flters li:last-child {
   margin-right: 0;
 }
 
-#portfolio .portfolio-wrap {
+#softwares .portfolio-wrap {
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   transition: 0.3s;
 }
 
-#portfolio .portfolio-wrap:hover {
+#softwares .portfolio-wrap:hover {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
 }
 
-#portfolio .portfolio-item {
+#softwares .portfolio-item {
   position: relative;
-  height: 360px;
+  /*height: 360px;*/
   overflow: hidden;
 }
 
-#portfolio .portfolio-item figure {
+#softwares .portfolio-item figure {
   background: #000;
   overflow: hidden;
   height: 240px;
@@ -914,12 +914,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
 }
 
-#portfolio .portfolio-item figure:hover img {
+#softwares .portfolio-item figure:hover img {
   opacity: 0.4;
   transition: 0.3s;
 }
 
-#portfolio .portfolio-item figure .link-preview, #portfolio .portfolio-item figure .link-details {
+#softwares .portfolio-item figure .link-preview,
+#softwares .portfolio-item figure .link-documentation,
+#softwares .portfolio-item figure .link-videos {
   position: absolute;
   display: inline-block;
   visibility: hidden;
@@ -932,49 +934,72 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.2s;
 }
 
-#portfolio .portfolio-item figure .link-preview i, #portfolio .portfolio-item figure .link-details i {
+#softwares .portfolio-item figure .link-preview i,
+#softwares .portfolio-item figure .link-documentation i,
+#softwares .portfolio-item figure .link-videos i {
   padding-top: 6px;
   font-size: 22px;
   color: #333;
 }
 
-#portfolio .portfolio-item figure .link-preview:hover, #portfolio .portfolio-item figure .link-details:hover {
+#softwares .portfolio-item figure .link-preview:hover,
+#softwares .portfolio-item figure .link-documentation:hover {
   background: #18d26e;
 }
 
-#portfolio .portfolio-item figure .link-preview:hover i, #portfolio .portfolio-item figure .link-details:hover i {
+#softwares .portfolio-item figure .link-videos:hover {
+  background: #999;
+  cursor: not-allowed;
+}
+
+#softwares .portfolio-item figure .link-preview:hover i,
+#softwares .portfolio-item figure .link-documentation:hover i {
   color: #fff;
 }
 
-#portfolio .portfolio-item figure .link-preview {
-  left: calc(50% - 38px);
+#softwares .portfolio-item figure .link-videos:hover i {
+  color: #ccc;
+}
+
+#softwares .portfolio-item figure .link-preview {
+  left: calc(50% - 18px);
   top: calc(50% - 18px);
 }
 
-#portfolio .portfolio-item figure .link-details {
-  right: calc(50% - 38px);
+#softwares .portfolio-item figure .link-documentation {
+  right: calc(50% - 18px);
   top: calc(50% - 18px);
 }
 
-#portfolio .portfolio-item figure:hover .link-preview {
-  visibility: visible;
-  left: calc(50% - 44px);
+#softwares .portfolio-item figure .link-videos {
+  right: calc(50% - 18px);
+  top: calc(50% - 18px);
 }
 
-#portfolio .portfolio-item figure:hover .link-details {
+#softwares .portfolio-item figure:hover .link-preview {
   visibility: visible;
-  right: calc(50% - 44px);
+  left: calc(50% - 70px);
 }
 
-#portfolio .portfolio-item .portfolio-info {
+#softwares .portfolio-item figure:hover .link-documentation {
+  visibility: visible;
+  right: calc(50% - 18px);
+}
+
+#softwares .portfolio-item figure:hover .link-videos {
+  visibility: visible;
+  right: calc(50% - 70px);
+}
+
+#softwares .portfolio-item .portfolio-info {
   background: #fff;
   text-align: center;
   padding: 30px;
-  height: 90px;
+  /*height: 90px;*/
   border-radius: 0 0 3px 3px;
 }
 
-#portfolio .portfolio-item .portfolio-info h4 {
+#softwares .portfolio-item .portfolio-info h4 {
   font-size: 18px;
   line-height: 1px;
   font-weight: 700;
@@ -982,21 +1007,32 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-bottom: 0;
 }
 
-#portfolio .portfolio-item .portfolio-info h4 a {
+#softwares .portfolio-item .portfolio-info h4 a {
   color: #333;
 }
 
-#portfolio .portfolio-item .portfolio-info h4 a:hover {
+#softwares .portfolio-item .portfolio-info h4 a:hover {
   color: #18d26e;
 }
 
-#portfolio .portfolio-item .portfolio-info p {
+#softwares .portfolio-item .portfolio-info h5 {
   padding: 0;
   margin: 0;
   color: #b8b8b8;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+#softwares .portfolio-item .portfolio-info p {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+#softwares .portfolio-item .portfolio-info p.subtext {
+  font-style: italic;
+  color: #aaa;
+  font-weight: 500;
+  font-size: 14px;
 }
 
 /* Clients Section
@@ -1454,4 +1490,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ddd;
+}
+
+#footer .code {
+  text-align: center;
+  padding-top: 5px;
 }
